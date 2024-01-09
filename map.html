@@ -18,7 +18,7 @@
 
                 function initialize(){
                 // ADD TILE
-                var tile_opt = {attribution: 'Map data: &copy; <a href="https://developers.google.com/maps"> Google</a>, <a href="https://developers.google.com/maps/terms"> Terms of Use. </a>' , maxZoom: 22, reuseTiles: true, noWrap: true ,opacity: 0.5}
+                var tile_opt = {attribution: 'Map data: &copy; <a href="https://developers.google.com/maps"> Google</a>, <a href="https://developers.google.com/maps/terms"> Terms of Use. </a>' , maxZoom: 22.5, reuseTiles: true, noWrap: true ,opacity: 0.5}
                 var _tile = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', tile_opt);
 
                 // ADD MAP
@@ -62,11 +62,11 @@
                 
                 // ADD CIRCLES
                 for (let i = 0; i < coords.length; i++) {
-                for (let j = 0; j < coords[i].length; j++){L.circle([coords[i][j][0],coords[i][j][1]], {color: '#00B4FF',fillColor: '#00B4FF',fillOpacity: 1,radius: 0.45}).addTo(map);}
+                for (let j = 0; j < coords[i].length; j++){L.circle([coords[i][j][0],coords[i][j][1]], {color: '#00B4FF',fillColor: '#00B4FF',fillOpacity: 1,radius: 0.60}).addTo(map);}
                 }
 
                 // ADD ARROWS
-                var style_arrow = { color: '#00B4FF', fillColor: '#00B4FF', weight: 1, fillOpacity: 1};
+                var style_arrow = { color: '#00B4FF', fillColor: '#00B4FF', weight: 2, fillOpacity: 1};
 
                 for (let i = 0; i < arrows.length; i++) {
                 for (let j = 0; j < arrows[i].length; j++){L.polygon(arrows[i][j], style_arrow)
@@ -122,4 +122,3 @@
                 <div id="map"></div>
             </body>
             </html>
-            
