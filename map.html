@@ -18,11 +18,11 @@
 
                 function initialize(){
                 // ADD TILE
-                var tile_opt = {attribution: 'Map data: &copy; <a href="https://developers.google.com/maps"> Google</a>, <a href="https://developers.google.com/maps/terms"> Terms of Use. </a>' , maxZoom: 22.5, reuseTiles: true, noWrap: true ,opacity: 0.5}
+                var tile_opt = {attribution: 'Map data: &copy; <a href="https://developers.google.com/maps"> Google</a>, <a href="https://developers.google.com/maps/terms"> Terms of Use. </a>' , maxZoom: 60, reuseTiles: true, noWrap: true ,opacity: 0.5}
                 var _tile = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', tile_opt);
 
                 // ADD MAP
-                var map_opt = {zoomSnap: 0, zoomControl: true, inertia: false, doubleClickZoom: false, preferCanvas: true, wheelPxPerZoomLevel: 60}
+                var map_opt = {zoomSnap: 0, zoomControl: true, inertia: true, doubleClickZoom: true, preferCanvas: true, wheelPxPerZoomLevel: 60}
                 var map = L.map('map', map_opt).addLayer(_tile);
                 
 
@@ -122,3 +122,4 @@
                 <div id="map"></div>
             </body>
             </html>
+            
