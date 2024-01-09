@@ -70,6 +70,7 @@
 
                 for (let i = 0; i < arrows.length; i++) {
                 for (let j = 0; j < arrows[i].length; j++){L.polygon(arrows[i][j], style_arrow)
+                                                            .bringToFront()
                                                             .bindTooltip(texts[i][j], {permanent: false, className: 'custom-tooltip'})
                                                             .addTo(map);}
                                                         }
@@ -121,3 +122,4 @@
                 <div id="map"></div>
             </body>
             </html>
+            
