@@ -4,6 +4,7 @@
                 <meta charset="utf-8">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
                 <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+                <script src="https://unpkg.com/leaflet-ruler"></script>
                 <link rel="stylesheet" href="path_to_leaflet_pattern.css" />
 
                 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
@@ -45,7 +46,7 @@
                     
                 }
                 
-
+                L.control.ruler().addTo(map);
                 // ADD LINES
                 //var style = {color: "#F44336", weight: 5, opacity: 1};
                 //for (let i of coords) {L.polyline(i, style).addTo(map);}
